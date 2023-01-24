@@ -1,8 +1,34 @@
 import { Content, Form, Title, Button, Logo } from "../../components/Enrollments/SignIn";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import InfoBox from "./InfoBox";
+import { useState, useContext } from "react";
+import axios from "axios";
+import UserContext from "../../contexts/UserContext";
 
 export default function SignIn() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const {setUserData} = useContext(UserContext);
+    const navigate = useNavigate();
+
+    async function logar (event) {
+        event.preventDefault();
+
+        const data = {
+            email,
+            password
+        }
+
+        try {
+            const request = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/signin`, data);
+            setUserData(request.data);
+            navigate('/mainpage');
+          } catch (err) {
+            console.log('Não foi possível fazer o login!');
+          }
+    }
+
         return (
             <Content>
                <InfoBox />
@@ -10,11 +36,11 @@ export default function SignIn() {
                     <Logo>Bias Compiler</Logo>
                     <Title>Entre em sua conta:</Title>
     
-                    <input type="email" name="email" placeholder="Seu email..." />
+                    <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder="Seu email..." />
     
-                    <input type="password" name="password" placeholder="Sua senha..." />
+                    <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Sua senha..." />
     
-                    <Button>Entrar</Button>
+                    <Button onClick={logar}>Entrar</Button>
                     <Link to="/signup"><h3>Ainda não possui conta? Crie aqui</h3></Link>
                 </Form>
             </Content>
