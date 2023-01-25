@@ -23,9 +23,9 @@ export default function SignIn() {
         try {
             const request = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/signin`, data);
             setUserData(request.data);
-            navigate('/mainpage');
+            navigate(`/${request.data.id}/welcome`);
           } catch (err) {
-            console.log('Não foi possível fazer o login!');
+            console.log(err);
           }
     }
 

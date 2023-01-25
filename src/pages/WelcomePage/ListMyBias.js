@@ -1,5 +1,58 @@
-export default function ListMyBias() {
+import { BiasesBox, BiasBox, Container, Image, Text } from "../../components/WelcomePage/ListBias";
+
+import UserContext from "../../contexts/UserContext";
+import { useEffect, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useToken from "../../hooks/useToken";
+import axios from "axios";
+
+function ListBias({value}) {
+    const navigate = useNavigate();
+    async function goToBiasPage() {
+        navigate(`/${value.id}/mainPage`)
+    }
+    
     return (
-        null
+        <BiasBox onClick={goToBiasPage}>
+            <Image onClick={goToBiasPage} 
+            src={value.imageurl_} alt="bias image"></Image>
+            <Text>
+                <h1>{value.name}</h1>
+                <h2>{value.nickname}</h2>
+            </Text>
+        </BiasBox>
+        
+    )
+}
+
+export default function ListMyBias() {
+    const [biasesData, setBiasesData] = useState([]);
+    let { userData } = useContext(UserContext);
+    const token = useToken();
+
+    const config = {
+        headers: {
+          "Authorization": `Bearer ${token}`
+      }
+    }
+
+    useEffect(() => {
+        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/listBias/${userData.userid_}`, config)
+
+        response.then((res) => {
+          setBiasesData(res.data)
+        })
+        
+        response.catch((e) => console.log(e))
+    }, [])
+
+    console.log(biasesData);
+    return (
+        <Container>
+           <BiasesBox>
+            {biasesData.map((value, index) => <ListBias key={index} value={value} />)}
+           </BiasesBox>
+            
+        </Container>
     );
 }

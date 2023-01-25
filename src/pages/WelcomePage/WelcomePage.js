@@ -1,27 +1,33 @@
 import { Content, Images, Button } from "../../components/WelcomePage/WelcomePage";
 import NewBias from "../../assets/img/addnewbias.jpg"
 import ListBias from "../../assets/img/listyourbias.jpg"
-import { Link } from "react-router-dom";
 
-export default function WelcomePage(userId) {
-    userId = 1;
+import axios from "axios";
+import { useState, useContext } from "react"
+import { Link, useNavigate } from "react-router-dom";
+import UserContext from "../../contexts/UserContext";
+
+export default function WelcomePage() {
+let { userData } = useContext(UserContext);
+
     return (
         <Content>
-            <h1>Start here:</h1>
+            <h1>Bem-vindo(a)!</h1>
             <Images>
                 <Button>
-                    <Link to={`/${userId}/addBias`}>
+                    <Link to={`/${userData.userid_}/addBias`}>
                         <img src={NewBias} alt="add bias Felix"/>
                     </Link>
-                    <h3>Add New Bias</h3>
+                    <h3>Adicionar Bias</h3>
                 </Button>
 
                 <Button>
-                    <Link to={`/${userId}/listBias`}>
+                    <Link to={`/${userData.userid_}/listBias`}>
                         <img src={ListBias} alt="add bias Felix"/>
                     </Link>
-                    <h3>List Your Biases</h3>
+                    <h3>Listar Biases</h3>
                 </Button>
+
             </Images>
         </Content>
     );

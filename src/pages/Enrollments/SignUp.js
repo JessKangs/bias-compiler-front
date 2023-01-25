@@ -26,9 +26,9 @@ export default function SignUp () {
        
     try {
         const request = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/signup`, data);
-    
+
         setUserData(request.data);
-        navigate(`/${request.data.id}/FirstSteps`)
+        navigate(`/`)
     } catch (err) {
         console.log(err)
     }

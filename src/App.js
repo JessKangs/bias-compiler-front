@@ -10,8 +10,9 @@ import './App.css';
 import MainPage from './pages/MainPage/MainPage';
 import SignUp from './pages/Enrollments/SignUp';
 import SignIn from './pages/Enrollments/SignIn';
-import FirstSteps from './pages/Enrollments/FirstSteps';
+import AddBias from './pages/WelcomePage/AddBias';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
+import ListMyBias from './pages/WelcomePage/ListMyBias';
 
 function App() {
   let [userData, setUserData] = useState('');
@@ -22,10 +23,11 @@ function App() {
         <Router>
           <Routes>
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/:userId/FirstSteps" element={<FirstSteps />} />
             <Route path="/" element={<SignIn />} />
-            <Route path="/welcome" element={ <WelcomePage />} />
-            <Route path="/mainpage" element={<MainPage />} />
+            <Route path="/:userId/welcome" element={ <WelcomePage />} />
+            <Route path="/:userId/addBias" element={<AddBias />} />
+            <Route path="/:userId/listBias" element={<ListMyBias />} />
+            <Route path="/:biasId/mainPage" element={<MainPage />} />
           </Routes>
         </Router>
       </div>
