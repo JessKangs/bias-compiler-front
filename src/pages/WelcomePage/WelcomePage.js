@@ -2,8 +2,7 @@ import { Content, Images, Button } from "../../components/WelcomePage/WelcomePag
 import NewBias from "../../assets/img/addnewbias.jpg"
 import ListBias from "../../assets/img/listyourbias.jpg"
 
-import axios from "axios";
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
 

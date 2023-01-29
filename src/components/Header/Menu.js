@@ -3,12 +3,19 @@ import styled from "styled-components"
 export const Content = styled.div`
     height: 500px;
     width: 200px;
-    margin-top: 100px;
+    margin-top: 600px;
+    margin-right: 45px;
     position: fixed;
     display: flex;
     flex-direction: column;
-    left: 1350px;
     z-index: 1;
+
+    h3 {
+        font-size: 15px;
+        text-decoration: underline;
+        font-family: 'ABeeZee', sans-serif;
+        cursor: pointer;
+    }
 `;
 
 export const Image = styled.img`
@@ -20,13 +27,14 @@ export const Image = styled.img`
 export const Item = styled.div`
     height: 40px;
     width: 250px;
-    background-color: #015c63;
+    background-color: #7cbfbf;
     margin-top: 15px;
     cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
     `;
 
 export const Name = styled.p`

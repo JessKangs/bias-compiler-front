@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-    background-color: #ffeee6;
+    /* background-color: #ffeee6; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;

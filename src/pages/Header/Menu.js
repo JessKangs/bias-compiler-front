@@ -1,4 +1,4 @@
-import { Item, Name, Image, Content } from "../../components/MainPage/Menu";
+import { Item, Name, Image, Content } from "../../components/Header/Menu";
 import ShootingStar from "../../assets/img/shooting-star.png"
 import UserContext from "../../contexts/UserContext";
 import { useEffect, useContext, useState } from "react";
@@ -23,7 +23,8 @@ function ListBias({value}) {
 
 export default function Menu() {
     const [biasesData, setBiasesData] = useState([]);
-    let { userData } = useContext(UserContext);
+    let { userData, biasData } = useContext(UserContext);
+    const navigate = useNavigate();
     const token = useToken();
 
     const config = {
@@ -42,10 +43,10 @@ export default function Menu() {
         response.catch((e) => console.log(e))
     }, [])
 
-    console.log(biasesData, 'a');
     return (
         <Content>
             {biasesData.map((value, index) => <ListBias value={value} />) }
+            <h3 onClick={() => navigate(`/${biasData.id}/mainPage`)}>Go to main page ➟</h3>
         </Content>
     )
 }

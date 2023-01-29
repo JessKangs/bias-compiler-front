@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react"
-import { ProfileBox, Content, Image, Nickname } from "../../components/MainPage/Profile"
+import { ProfileBox, Content, Image, Nickname } from "../../components/Header/Profile"
 import UserContext from "../../contexts/UserContext";
 import useToken from "../../hooks/useToken";
 import Menu from "./Menu"
@@ -38,12 +38,12 @@ export default function Profile() {
     return(
         <Content>
           <ProfileBox>
-            <Image src={profileData.imageurl_} alt="Felix with flowers"></Image>
-            <Nickname>{profileData.nickname} </Nickname>
             {!isMenuOpen ? <ion-icon onClick={openMenu} name="chevron-down-outline"></ion-icon> :
             <ion-icon onClick={openMenu} name="chevron-up-outline"></ion-icon>}
+            <Nickname>{profileData.nickname} </Nickname>
+            <Image src={profileData.imageurl_} alt="Felix with flowers"></Image>
           </ProfileBox>
-          {isMenuOpen ? <Menu /> : null}
+          {isMenuOpen ?  <Menu /> : null}
         </Content>
     )
 }

@@ -37,7 +37,7 @@ export default function AddBias() {
         try {
          await axios.post(`${process.env.REACT_APP_API_BASE_URL}/firststeps/${userData.userid_}`, data, config);
 
-        navigate(`/${userData.id}/mainpage`)
+        navigate(`/${userData.id}/welcome`)
 
         } catch (err) {
             console.log(err)

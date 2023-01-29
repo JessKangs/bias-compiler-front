@@ -7,9 +7,12 @@ import useToken from "../../hooks/useToken";
 import axios from "axios";
 
 function ListBias({value}) {
+    let { setBiasData } = useContext(UserContext);
     const navigate = useNavigate();
+
     async function goToBiasPage() {
-        navigate(`/${value.id}/mainPage`)
+        setBiasData(value);
+        navigate(`/${value.id}/mainPage`);
     }
     
     return (
@@ -26,7 +29,7 @@ function ListBias({value}) {
 }
 
 export default function ListMyBias() {
-    const [biasesData, setBiasesData] = useState([]);
+    const [biasesList, setBiasesList] = useState([]);
     let { userData } = useContext(UserContext);
     const token = useToken();
 
@@ -40,17 +43,16 @@ export default function ListMyBias() {
         const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/listBias/${userData.userid_}`, config)
 
         response.then((res) => {
-          setBiasesData(res.data)
+          setBiasesList(res.data)
         })
         
         response.catch((e) => console.log(e))
     }, [])
 
-    console.log(biasesData);
     return (
         <Container>
            <BiasesBox>
-            {biasesData.map((value, index) => <ListBias key={index} value={value} />)}
+            {biasesList.map((value, index) => <ListBias key={index} value={value} />)}
            </BiasesBox>
             
         </Container>

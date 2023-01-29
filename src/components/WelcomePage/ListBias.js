@@ -20,21 +20,23 @@ export const BiasesBox = styled.div`
 `;
 
 export const BiasBox = styled.div`
-    width: 220px;
+    width: 230px;
     height: 275px;
-    background-color: aliceblue;
+    background-color: #B3DDD1;
     display: flex;
     flex-direction: column;
     font-family: 'ABeeZee', sans-serif;
     align-items: center;
     padding-top: 40px;
-
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .1);
 `;
 
 export const Image = styled.img`
-    width: 130px;
+    width: 140px;
     height: 140px;
     object-fit: cover;
+    margin-bottom: 10px;
 `;
 
 export const Text = styled.div`

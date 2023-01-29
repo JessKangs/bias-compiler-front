@@ -5,12 +5,11 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #ffeee6; */
-    height: 840px;
+    height: 860px;
 
     img {
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
         object-fit: contain;
         border-radius: 50%;
         box-shadow: 5px 5px 7px rgba(0,0,0,.1);
@@ -21,7 +20,7 @@ export const Images = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 350px;
+    width: 450px;
 `;
 
 export const Button = styled.div`
@@ -31,5 +30,10 @@ export const Button = styled.div`
     align-items: center;
     font-size: 24px;
     font-family: 'ABeeZee', sans-serif;
+    width: 200px;
+
+    h3 {
+        width: 130px;
+    }
 `;
 

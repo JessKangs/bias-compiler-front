@@ -8,6 +8,7 @@ export const Content = styled.div`
     justify-content: center;
     height: 860px;
     z-index: 0;
+    margin-top: 80px;
 `;
 
 export const Div = styled.div``;
@@ -18,6 +19,8 @@ export const Image = styled.img`
     height: 700px;
     z-index: 0;
     border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
+
 `;
 
 export const BiasFactsBox = styled.div`
@@ -35,13 +38,17 @@ export const Arrow1 = styled.img`
 `;
 
 export const Button1 = styled.div`
-    ion-icon {
+    img {
+        height: 60px;
         font-size: 60px;
         cursor: pointer;
         padding: 20px;
-        border: 2px dotted black;
-        border-radius: 50%;
+     
     }
+        border: 2px dotted #174cb0;
+        border-radius: 50%;
+        height: 100px;
+
 `;
 
 
@@ -61,14 +68,17 @@ export const Arrow2 = styled.img`
 `;
 
 export const Button2 = styled.div`
-    ion-icon {
-        font-size: 60px;
+    img {
+        height: 60px;
         cursor: pointer;
         padding: 20px;
-        border: 2px dotted black;
-        border-radius: 50%;
-        margin-top: 45px;
     }
+
+
+    border: 2px dotted #f7b083;
+    border-radius: 50%;
+    height: 100px;
+    margin-top: 45px;
 `;
 
 export const BiasQuotesBox = styled.div`
@@ -88,14 +98,17 @@ export const Arrow3 = styled.img`
 `;
 
 export const Button3 = styled.div`
-    ion-icon {
-        font-size: 60px;
+    img {
+        height: 60px;
         cursor: pointer;
         padding: 20px;
-        border: 2px dotted black;
-        border-radius: 50%;
-        margin-left: 12px;
     }
+
+
+    border: 2px dotted #5fb2d9;
+    border-radius: 50%;
+    height: 100px;
+    margin-left: 12px;
 `;
 
 export const BiasMemoriesBox = styled.div`
@@ -111,14 +124,17 @@ export const Arrow4 = styled.img`
 `;
 
 export const Button4 = styled.div`
-    ion-icon {
-        font-size: 60px;
+    img {
+        height: 60px;
         cursor: pointer;
         padding: 20px;
-        border: 2px dotted black;
-        border-radius: 50%;
-        margin-left: 20px;
     }
+
+
+    border: 2px dotted #facb2f;
+    border-radius: 50%;
+    height: 100px;
+    margin-left: 20px;
 `;
 
 export const MyNotesBox = styled.div`
@@ -137,12 +153,15 @@ export const Arrow5 = styled.img`
 
 export const Button5 = styled.div`
 
-    ion-icon {
-        font-size: 60px;
+    img {
+        height: 60px;
         cursor: pointer;
         padding: 20px;
-        border: 2px dotted black;
-        border-radius: 50%;
-        margin-top: 100px;
     }
+
+
+    border: 2px dotted #5a4375;
+    border-radius: 50%;
+    height: 100px;
+    margin-top: 100px;
 `;

@@ -5,43 +5,62 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffeee6;
-    background-image: url('');
-    height: 840px;
+    padding-top: 100px;
 
     h3 {
+        width: 460px;
         font-family: 'ABeeZee', sans-serif;
-        margin-bottom: 70px;
+        margin: 50px 0 30px 0px;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 `;
 
 export const Form = styled.form`
-    width: 400px;
-    height: 600px;
+    width: 520px;
+    height: 890px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
     background-color: #AFD7CE;
     border-radius: 20px;
     font-family: 'ABeeZee', sans-serif;
-    position: relative;
-    padding: 20px;
+    font-size: 22px;
+    padding: 10px 0 10px 0;
     border: 2px;
     border-width: 0 3px 3px 0;
     border-color: rgba(0,0,0,0.3);
     border-style: solid;
+    margin-bottom: 80px;
 
     label {
         text-align: left;
-        width: 335px;
+        width: 400px;
+        margin-top: 25px;
+        margin-bottom: 18px;
     }
 
     input {
-        width: 300px;
-        height: 10px;
-        padding: 15px;
+        width: 400px;
+        height: 20px;
+        padding: 10px;
         font-family: 'ABeeZee', sans-serif;
+        font-size: 20px;
+        border-radius: 15px;
+        border-width: 0 1.8px 1.8px 0;
+        border-color: rgba(0,0,0,0.3);
+        border-style: solid;
+    }
+
+    textarea {
+        width: 400px;
+        height: 60px;
+        padding: 10px;
+        font-family: 'ABeeZee', sans-serif;
+        font-size: 20px;
         border-radius: 15px;
         border-width: 0 1.8px 1.8px 0;
         border-color: rgba(0,0,0,0.3);
@@ -59,17 +78,25 @@ export const Form = styled.form`
     }
 `;
 
+export const EmojiBox = styled.div`
+    display: flex;
+
+    h1 {
+        cursor: pointer;
+    }
+`;
+
 export const Button = styled.div`
-    width: 160px;
-    height: 35px;
+    width: 180px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'ABeeZee', sans-serif;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 15px;
     background-color: #78c4b3;
-    border-radius: 15px;
+    border-radius: 10px;
     border-width: 0 2px 2px 0;
     border-color: rgba(0,0,0,0.3);
     border-style: solid;
