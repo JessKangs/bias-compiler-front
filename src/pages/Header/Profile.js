@@ -24,7 +24,7 @@ export default function Profile() {
 
   useEffect( () => {
     
-        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/profile/${userData.userid_}`, config)
+        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/profile/${userData.userid}`, config)
 
         response.then((res) => {
           setProfileData(res.data)
@@ -41,7 +41,7 @@ export default function Profile() {
             {!isMenuOpen ? <ion-icon onClick={openMenu} name="chevron-down-outline"></ion-icon> :
             <ion-icon onClick={openMenu} name="chevron-up-outline"></ion-icon>}
             <Nickname>{profileData.nickname} </Nickname>
-            <Image src={profileData.imageurl_} alt="Felix with flowers"></Image>
+            <Image src={profileData.imageurl} alt="Felix with flowers"></Image>
           </ProfileBox>
           {isMenuOpen ?  <Menu /> : null}
         </Content>

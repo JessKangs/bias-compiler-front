@@ -40,7 +40,7 @@ let { biasData } = useContext(UserContext);
             </BiasLinksBox>
             
             <Div>
-                <Image src={`${biasData.imageurl_}`} alt="bias picture"></Image>
+                <Image src={`${biasData.imageurl}`} alt="bias picture"></Image>
             </Div>
 
             <BiasQuotesBox onClick={() => navigate(`/${biasData.id}/quotes`)}>

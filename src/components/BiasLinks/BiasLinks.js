@@ -5,7 +5,7 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 860px;
+    height: 950px;
 
     img {
         width: 160px;

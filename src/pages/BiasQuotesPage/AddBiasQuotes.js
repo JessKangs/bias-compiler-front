@@ -8,10 +8,10 @@ import useToken from "../../hooks/useToken";
 import axios from "axios";
 
 export default function AddBiasQuotes() {
-    const [quoteContext, setQuoteContext] = useState('');
+    const [context, setContext] = useState('');
     const [quote, setQuote] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
-    const [url, setUrl] = useState('');
+    const [imageUrl, setImageUrl] = useState(null);
+    const [url, setUrl] = useState(null);
     const [date, setDate] = useState('');
     const [tag, setTag] = useState('');
 
@@ -30,7 +30,7 @@ export default function AddBiasQuotes() {
 
         const data = {
             quote,
-            quoteContext,
+            context,
             imageUrl,
             url,
             date,
@@ -38,7 +38,7 @@ export default function AddBiasQuotes() {
         }
 
         try {
-         await axios.post(`${process.env.REACT_APP_API_BASE_URL}/${biasData.id}/quotes`, data, config);
+          await axios.post(`${process.env.REACT_APP_API_BASE_URL}/${biasData.id}/quote`, data, config);
 
         navigate(`/${biasData.id}/quotes`)
 
@@ -53,13 +53,13 @@ export default function AddBiasQuotes() {
             <Header />
             <Content>
             
-                <h3>Adicione aqui coisas que seu bias disse e que te tocaram!
+                <h3>Adicione aqui coisas que seu bias disse e que te tocaram!</h3>
                 <h2>* são campos obrigatórios</h2>
-                </h3>
+
                 <Form>
 
                     <label>*Onde seu bias disse a frase:</label>
-                    <input onChange={(e) => setQuoteContext(e.target.value)} type="text" name="contexto da citação" placeholder="Evento em que foi dito..." />
+                    <input onChange={(e) => setContext(e.target.value)} type="text" name="contexto da citação" placeholder="Evento em que foi dito..." />
 
                     <label>*Citação do seu bias:</label>
                     <textarea onChange={(e) => setQuote(e.target.value)} type="text" placeholder="Citação..." name="quote" cols="50" rows="10"/>
@@ -70,7 +70,7 @@ export default function AddBiasQuotes() {
                     <label>Link de um video do momento:</label>
                     <input onChange={(e) => setUrl(e.target.value)} type="url" name="url" placeholder="Url..."/>
 
-                    <label>Data da citação:</label>
+                    <label>*Data da citação:</label>
                     <input onChange={(e) => setDate(e.target.value)} type="date" name="quote date"/>
 
                     <label>*Escolha uma tag:</label>

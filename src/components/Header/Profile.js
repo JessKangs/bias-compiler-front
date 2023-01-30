@@ -20,7 +20,7 @@ export const ProfileBox = styled.div`
 
     ion-icon {
         margin-left: 30px;
-        color: #7d154e;
+        //color: #7d154e;
     }
 `;
 
@@ -36,5 +36,5 @@ export const Image = styled.img`
 export const Nickname = styled.h2`
   font-size: small;
   margin-left: 25px;
-  color: #7d154e;
+  //color: #7d154e;
 `;

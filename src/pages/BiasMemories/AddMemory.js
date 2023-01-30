@@ -10,9 +10,9 @@ export default function AddMemory() {
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [memory, setMemory] = useState('');
-    const [url1, setUrl1] = useState('');
-    const [url2, setUrl2] = useState('');
-    const [url3, setUrl3] = useState('');
+    const [url1, setUrl1] = useState(null);
+    const [url2, setUrl2] = useState(null);
+    const [url3, setUrl3] = useState(null);
     const feelings = [];
     console.log(feelings);
 

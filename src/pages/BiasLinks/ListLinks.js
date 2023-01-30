@@ -1,4 +1,4 @@
-import { LinksFeed, Div, Content, Text } from "../../components/BiasLinks/ListLinks";
+import { LinksFeed, Div, Content, Text, Title } from "../../components/BiasLinks/ListLinks";
 
 import Header from "../Header/Header"
 import UserContext from "../../contexts/UserContext";
@@ -6,6 +6,7 @@ import { useEffect, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
+import EmptyData from "../EmptyData";
 
 function LinkBox({value}) {
     const navigate = useNavigate();
@@ -46,9 +47,14 @@ export default function ListLinks() {
         <>
             <Header />
             <Content>
-                <LinksFeed>
-                    {biasLinks.map((value, index) => <LinkBox value={value} key={index} /> )}
-                </LinksFeed>
+                {   biasLinks.length > 0 ?
+                    <LinksFeed>
+                        <Title>Links</Title>
+                        {biasLinks.map((value, index) => <LinkBox value={value} key={index} /> )}
+                    </LinksFeed>
+                    :
+                    <EmptyData item="Link" />
+                }
             </Content>
         </>
     );

@@ -34,7 +34,7 @@ export default function Menu() {
     }
 
     useEffect(() => {
-        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/listBias/${userData.userid_}`, config)
+        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/listBias/${userData.userid}`, config)
 
         response.then((res) => {
           setBiasesData(res.data)

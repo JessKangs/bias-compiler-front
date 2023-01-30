@@ -2,11 +2,14 @@ import { Content, Images, Button } from "../../components/BiasFacts/BiasFacts"
 import UserContext from "../../contexts/UserContext";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../Header/Header"
 
 export default function BiasFacts() {
     let { biasData } = useContext(UserContext);
 
     return (
+        <>
+        <Header />
         <Content>
             
             <Images>
@@ -26,5 +29,6 @@ export default function BiasFacts() {
 
             </Images>
         </Content>
+        </>
     );
 }

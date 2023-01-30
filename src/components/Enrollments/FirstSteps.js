@@ -5,9 +5,7 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffeee6;
-    background-image: url('');
-    height: 840px;
+    height: 930px;
 
     h3 {
         font-family: 'ABeeZee', sans-serif;

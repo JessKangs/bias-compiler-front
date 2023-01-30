@@ -5,6 +5,7 @@ import { useEffect, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
+import EmptyData from "../EmptyData";
 
 function ListBias({value}) {
     let { setBiasData } = useContext(UserContext);
@@ -18,7 +19,7 @@ function ListBias({value}) {
     return (
         <BiasBox onClick={goToBiasPage}>
             <Image onClick={goToBiasPage} 
-            src={value.imageurl_} alt="bias image"></Image>
+            src={value.imageurl} alt="bias image"></Image>
             <Text>
                 <h1>{value.name}</h1>
                 <h2>{value.nickname}</h2>
@@ -40,7 +41,7 @@ export default function ListMyBias() {
     }
 
     useEffect(() => {
-        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/listBias/${userData.userid_}`, config)
+        const response =  axios.get(`${process.env.REACT_APP_API_BASE_URL}/listBias/${userData.userid}`, config)
 
         response.then((res) => {
           setBiasesList(res.data)
@@ -51,9 +52,13 @@ export default function ListMyBias() {
 
     return (
         <Container>
-           <BiasesBox>
-            {biasesList.map((value, index) => <ListBias key={index} value={value} />)}
-           </BiasesBox>
+           {
+            biasesList.length > 0 ? 
+            <BiasesBox>
+                {biasesList.map((value, index) => <ListBias key={index} value={value} />)}
+            </BiasesBox> : 
+            <EmptyData item="Bias"/>
+           }
             
         </Container>
     );

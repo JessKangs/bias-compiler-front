@@ -6,12 +6,19 @@ export const Content = styled.div`
     align-items: center;
 `;
 
+export const Title = styled.h1`
+    font-family: 'Arizonia', cursive;
+    margin: 0px 0px 10px 0px;
+    text-decoration: underline dotted;
+
+`;
+
 export const LinksFeed = styled.div`
-    margin-top: 120px;
-    padding: 20px 20px 50px 20px;
+    margin-top: 160px;
+    padding: 20px 20px 90px 20px;
     width: 700px;
     height: fit-content;
-    background-color: #ffbdb5;
+    background-color: #c1d7e3;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -24,7 +31,7 @@ export const Div = styled.div`
     height: fit-content;
     height: 200px;
     width: 98%;
-    background-color: #ffc2ba;
+    background-color: #cadde8;
     box-sizing: border-box;
     padding: 0 30px 0 20px;
     margin-top: 15px;
@@ -34,6 +41,7 @@ export const Div = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-radius: 5px;
 
     h1 {
         font-size: 22px;

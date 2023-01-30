@@ -6,7 +6,7 @@ export const Content = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 860px;
+    height: 930px;
 `;
 
 export const Form = styled.div`

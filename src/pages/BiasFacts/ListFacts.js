@@ -1,4 +1,4 @@
-import { FactsFeed, Div, Content, Text } from "../../components/BiasFacts/ListFacts";
+import { FactsFeed, Div, Content, Text, Title } from "../../components/BiasFacts/ListFacts";
 
 import Header from "../Header/Header"
 import UserContext from "../../contexts/UserContext";
@@ -6,6 +6,7 @@ import { useEffect, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
+import EmptyData from "../EmptyData";
 
 function FactBox({value}) {
 
@@ -47,9 +48,14 @@ export default function ListFacts() {
         <>
             <Header />
             <Content>
-                <FactsFeed>
-                    {biasFacts.map((value, index) => <FactBox value={value} key={index} /> )}
-                </FactsFeed>
+                {   biasFacts.length > 0 ?
+                    <FactsFeed>
+                    <Title>Facts</Title>
+                        {biasFacts.map((value, index) => <FactBox value={value} key={index} /> )}
+                    </FactsFeed>
+                    :
+                    <EmptyData item="Fato" />
+                }
             </Content>
         </>
     );

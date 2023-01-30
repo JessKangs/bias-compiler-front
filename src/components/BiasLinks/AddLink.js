@@ -20,7 +20,7 @@ export const Content = styled.div`
 
 export const Form = styled.form`
     width: 520px;
-    height: 890px;
+    height: 770px;
     display: flex;
     flex-direction: column;
     align-items: center;
