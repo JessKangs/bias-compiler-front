@@ -54,7 +54,7 @@ export default function ListFacts() {
                         {biasFacts.map((value, index) => <FactBox value={value} key={index} /> )}
                     </FactsFeed>
                     :
-                    <EmptyData item="Fato" />
+                    setTimeout(<EmptyData item="Fato" />, 2000)
                 }
             </Content>
         </>

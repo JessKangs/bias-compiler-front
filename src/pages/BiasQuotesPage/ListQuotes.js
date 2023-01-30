@@ -64,7 +64,7 @@ export default function ListQuotes() {
                     </QuotesFeed>
                 </FeedContent> 
                 :
-                <EmptyData item="Citação" />
+                setTimeout(<EmptyData item="Citação" />, 2000)
             }
        </Content>
     );

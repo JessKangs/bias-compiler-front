@@ -57,7 +57,7 @@ export default function ListMemories() {
                         {biasMemories.map((value, index) => <MemoryBox value={value} key={index} /> )}
                     </LinksFeed>
                     :
-                    <EmptyData item="Memórias" />
+                    setTimeout(<EmptyData item="Memórias" />, 2000)
                 }
             </Content>
         </>

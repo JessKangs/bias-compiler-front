@@ -56,8 +56,9 @@ export default function ListMyBias() {
             biasesList.length > 0 ? 
             <BiasesBox>
                 {biasesList.map((value, index) => <ListBias key={index} value={value} />)}
-            </BiasesBox> : 
-            <EmptyData item="Bias"/>
+            </BiasesBox> 
+            : 
+            setTimeout(<EmptyData item="Bias"/>, 2000)
            }
             
         </Container>

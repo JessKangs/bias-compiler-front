@@ -53,7 +53,7 @@ export default function ListLinks() {
                         {biasLinks.map((value, index) => <LinkBox value={value} key={index} /> )}
                     </LinksFeed>
                     :
-                    <EmptyData item="Link" />
+                    setTimeout(<EmptyData item="Link" />, 2000)
                 }
             </Content>
         </>
