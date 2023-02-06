@@ -1,31 +1,46 @@
-import { LinksFeed, Div, Content, Title, Button } from "../../components/BiasMemories/ListMemories";
+import { LinksFeed, Div, Content, Title, Emojis, E, Previous, Next, MemoriesBox, MemoryLinksBox, Date } from "../../components/BiasMemories/ListMemories";
 
 import Header from "../Header/Header"
+import EmptyData from "../EmptyData";
 import UserContext from "../../contexts/UserContext";
 import { useEffect, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
-import EmptyData from "../EmptyData";
 
-function MemoryBox({value}) {
-    const navigate = useNavigate();
+import { Story } from "../BiasMemories/LinkPreview";
 
+function MemoryBox({setDate, value}) {
     let emojis = value.feelings;
-
+    useEffect(() => { setDate(value.date.split("T")[0].split("-")); }, [])
+   
     return (
-        <Div>
-            <h1>{value.title}</h1>
-            <h2 onClick={() => window.open(`${value.url}`)}>{value.url}</h2>
-            <h3>{value.memory}</h3>
-            <h4>{emojis.map((value, index) => value === 'A1' ? '😾' : value === 'L1' ? '😻' : value === 'S1' ? '😿' : value === 'F1' ? '😹' : value === 'C1' ? '😽' : value === 'E1' ? '🤧' : null )}</h4>
-        </Div>
+        <MemoriesBox>
+            <Div>
+                <h1>{value.title}</h1>
+                <h3>{value.memory}</h3>
+            </Div>
+
+
+            <MemoryLinksBox>  
+
+                {value.url1 !== null ? <Story url={value.url1} media="video" /> : ''}
+
+                {value.url2 !== null ? <Story url={value.url2} media="video"  /> : ''}
+
+                {value.url3 !== null ? <Story url={value.url3} media="video" /> : ''}
+
+                <Emojis>
+                    {emojis.map((value, index) => value === 'A1' ? <E>😾</E> : value === 'L1' ? <E>😻</E> : value === 'S1' ? <E>😿</E> : value === 'F1' ? <E>😹</E> : value === 'C1' ? <E>😽</E> : value === 'E1' ? <E>🤧</E> : null )}
+                </Emojis>
+            </MemoryLinksBox>
+        </MemoriesBox>
     );
 }
 
 export default function ListMemories() {
-    const [showMore, setShowMore] = useState(false);
+    const [showMore, setShowMore] = useState(0);
     const [biasMemories, setBiasMemories] = useState([]);
+    const [date, setDate] = useState('');
     let { biasData } = useContext(UserContext);
     const token = useToken();
 
@@ -46,18 +61,46 @@ export default function ListMemories() {
     }, [])
 
 
+    let newDate = '';
     return (
-        <>
-            <Header />
-            <Content>
-                {
-                    biasMemories.length > 0 ?
+    <>
+        <Header />
+        <Content>
+            {
+                biasMemories.length > 0 ?
+                <>
                     <LinksFeed>
                         <Title>Memories</Title>
-                        {biasMemories.map((value, index) => <MemoryBox value={value} key={index} /> )}
+                  
+                        <Date>{`${date[2]}.${date[1]}.${date[0]}`}</Date>
+                        <MemoryBox setDate={setDate} value={biasMemories[showMore]} />
+
+                    
+                    { showMore === 0 ? null :
+                        <Previous
+                            showMore={showMore}
+                            onClick={() => setShowMore(showMore - 1)}
+                            >
+                            Previous
+                        </Previous>
+                     }
+
+                    { showMore === biasMemories.length - 1 ? null :
+                        <Next
+                            showMore={showMore}
+                            biasMemories={biasMemories}
+                            onClick={() => setShowMore(showMore + 1)}
+                            >
+                            Next
+                        </Next>
+                    }
+                    
                     </LinksFeed>
-                    :
-                    setTimeout(<EmptyData item="Memórias" />, 2000)
+
+                
+                </>
+                :
+                <EmptyData item="Memórias" />
                 }
             </Content>
         </>

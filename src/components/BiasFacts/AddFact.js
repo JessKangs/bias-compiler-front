@@ -5,11 +5,12 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 930px;
 
     h3 {
         width: 460px;
         font-family: 'ABeeZee', sans-serif;
-        margin: 130px 0 30px 0px;
+       // margin: 130px 0 30px 0px;
     }
 
     h2 {
@@ -19,51 +20,36 @@ export const Content = styled.div`
 
 export const Form = styled.form`
     width: 500px;
-    height: 320px;
+    height: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #AFD7CE;
+    background-color: #c7ddb5;
     border-radius: 20px;
     font-family: 'ABeeZee', sans-serif;
     font-size: 22px;
-    padding: 10px 0 10px 0;
     border: 2px;
-    border-width: 0 3px 3px 0;
-    border-color: rgba(0,0,0,0.3);
-    border-style: solid;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
     margin-bottom: 80px;
 
     label {
         text-align: left;
         width: 400px;
-        margin-top: 25px;
         margin-bottom: 18px;
     }
 
     input {
         width: 380px;
-        height: 20px;
-        padding: 10px;
+        height: 40px;
+        padding: 20px;
+        margin-bottom: 25px;
+        box-sizing: border-box;
         font-family: 'ABeeZee', sans-serif;
         font-size: 20px;
-        border-radius: 15px;
-        border-width: 0 1.8px 1.8px 0;
-        border-color: rgba(0,0,0,0.3);
-        border-style: solid;
-    }
-
-    textarea {
-        width: 400px;
-        height: 60px;
-        padding: 10px;
-        font-family: 'ABeeZee', sans-serif;
-        font-size: 20px;
-        border-radius: 15px;
-        border-width: 0 1.8px 1.8px 0;
-        border-color: rgba(0,0,0,0.3);
-        border-style: solid;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
     }
 
     h3 {
@@ -85,10 +71,8 @@ export const Button = styled.div`
     justify-content: center;
     font-family: 'ABeeZee', sans-serif;
     cursor: pointer;
-    margin-top: 20px;
-    background-color: #78c4b3;
-    border-radius: 10px;
-    border-width: 0 2px 2px 0;
-    border-color: rgba(0,0,0,0.3);
-    border-style: solid;
+    margin-top: 10px;
+    background-color: #a3c585;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
 `;

@@ -21,5 +21,5 @@ const IframeStyle = styled.iframe`
     width: 400px;
     position: fixed;
     bottom: 0;
-    margin-left: 20px;
+    left: 20px;
 `;

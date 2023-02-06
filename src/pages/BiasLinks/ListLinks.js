@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
 import EmptyData from "../EmptyData";
+import { Story } from "../BiasLinks/LinkPreview"
 
 function LinkBox({value}) {
     const navigate = useNavigate();
@@ -15,8 +16,8 @@ function LinkBox({value}) {
     return (
         <Div>
             <h1>{value.title}</h1>
-            <h2 onClick={() => window.open(`${value.url}`)}>{value.url}</h2>
-            <h3>{value.description}</h3>
+            {value.url !== null ? <Story url={value.url} media="video"  /> : ''}
+            <h1 style={{marginTop:"18px", fontSize:"18px"}}>{`#${value.site}`}</h1>
         </Div>
     );
 }
@@ -53,7 +54,7 @@ export default function ListLinks() {
                         {biasLinks.map((value, index) => <LinkBox value={value} key={index} /> )}
                     </LinksFeed>
                     :
-                    setTimeout(<EmptyData item="Link" />, 2000)
+                    <EmptyData item="Link" />
                 }
             </Content>
         </>

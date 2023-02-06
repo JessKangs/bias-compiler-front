@@ -20,20 +20,17 @@ export const Content = styled.div`
 
 export const Form = styled.form`
     width: 520px;
-    height: 770px;
+    height: 720px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #AFD7CE;
+    background-color: #c7ddb5;//#AFD7CE
     border-radius: 20px;
     font-family: 'ABeeZee', sans-serif;
     font-size: 22px;
     padding: 10px 0 10px 0;
-    border: 2px;
-    border-width: 0 3px 3px 0;
-    border-color: rgba(0,0,0,0.3);
-    border-style: solid;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
     margin-bottom: 80px;
 
     label {
@@ -44,27 +41,16 @@ export const Form = styled.form`
     }
 
     input {
-        width: 400px;
+        width: 410px;
         height: 20px;
-        padding: 10px;
+        box-sizing: border-box;
+        padding: 20px;
         font-family: 'ABeeZee', sans-serif;
         font-size: 20px;
-        border-radius: 15px;
-        border-width: 0 1.8px 1.8px 0;
-        border-color: rgba(0,0,0,0.3);
-        border-style: solid;
-    }
-
-    textarea {
-        width: 400px;
-        height: 60px;
-        padding: 10px;
-        font-family: 'ABeeZee', sans-serif;
-        font-size: 20px;
-        border-radius: 15px;
-        border-width: 0 1.8px 1.8px 0;
-        border-color: rgba(0,0,0,0.3);
-        border-style: solid;
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
+        border: none;
+        margin-bottom: 15px;
     }
 
     h3 {
@@ -88,6 +74,7 @@ export const Tag = styled.div`
     input {
         width: 30px;
         height: 20px;
+        box-shadow: none;
     }
 
     label {
@@ -103,10 +90,8 @@ export const Button = styled.div`
     justify-content: center;
     font-family: 'ABeeZee', sans-serif;
     cursor: pointer;
-    margin-top: 15px;
-    background-color: #78c4b3;
-    border-radius: 10px;
-    border-width: 0 2px 2px 0;
-    border-color: rgba(0,0,0,0.3);
-    border-style: solid;
+    margin-top: 20px;
+    background-color: #a3c585;//#78c4b3
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.2);
 `;

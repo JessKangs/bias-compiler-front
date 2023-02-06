@@ -6,7 +6,6 @@ import { Image, Content, Div,
         MyNotesBox, Arrow5, Button5,
     } from "../../components/MainPage/MyBias"
     
-import arrow from "../../assets/img/arrow.png"
 import blue from "../../assets/img/arrows/dark-blue-arrow.png"
 import lightBlue from "../../assets/img/arrows/light-blue-arrow.png"
 import yellow from "../../assets/img/arrows/yellow-arrow.png"
@@ -17,13 +16,12 @@ import { useContext } from "react"
 import { useNavigate } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
 
-
 export default function MyBias() {
 const navigate = useNavigate();
 let { biasData } = useContext(UserContext);
 
     return (
-        <Content>
+        <Content >
             
             <BiasFactsBox onClick={() => navigate(`/${biasData.id}/facts`)}>
                 <Button1 title="Your Bias Facts">
@@ -63,6 +61,7 @@ let { biasData } = useContext(UserContext);
                     <img src="https://img.icons8.com/dusk/512/note.png" alt="quotes icon"/>
                 </Button5>
             </MyNotesBox>
+            
         </Content>
     )
 }

@@ -19,21 +19,18 @@ export const Content = styled.div`
 `;
 
 export const Form = styled.form`
-    width: 520px;
+    width: 540px;
     height: 890px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #AFD7CE;
+    background-color: #c7ddb5;
     border-radius: 20px;
     font-family: 'ABeeZee', sans-serif;
     font-size: 22px;
     padding: 10px 0 10px 0;
-    border: 2px;
-    border-width: 0 3px 3px 0;
-    border-color: rgba(0,0,0,0.3);
-    border-style: solid;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
     margin-bottom: 80px;
 
     label {
@@ -46,13 +43,13 @@ export const Form = styled.form`
     input {
         width: 400px;
         height: 20px;
-        padding: 10px;
+        box-sizing: border-box;
+        padding: 20px;
         font-family: 'ABeeZee', sans-serif;
         font-size: 20px;
-        border-radius: 15px;
-        border-width: 0 1.8px 1.8px 0;
-        border-color: rgba(0,0,0,0.3);
-        border-style: solid;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
     }
 
     textarea {
@@ -61,10 +58,9 @@ export const Form = styled.form`
         padding: 10px;
         font-family: 'ABeeZee', sans-serif;
         font-size: 20px;
-        border-radius: 15px;
-        border-width: 0 1.8px 1.8px 0;
-        border-color: rgba(0,0,0,0.3);
-        border-style: solid;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 5px 5px 8px rgba(0,0,0, 0.2);
     }
 
     h3 {
@@ -88,6 +84,7 @@ export const Tag = styled.div`
     input {
         width: 30px;
         height: 20px;
+        box-shadow: none;
     }
 
     label {
@@ -104,9 +101,8 @@ export const Button = styled.div`
     font-family: 'ABeeZee', sans-serif;
     cursor: pointer;
     margin-top: 15px;
-    background-color: #78c4b3;
-    border-radius: 10px;
-    border-width: 0 2px 2px 0;
-    border-color: rgba(0,0,0,0.3);
-    border-style: solid;
+    background-color: #a3c585;
+    border-radius: 20px;
+    box-shadow: 5px 5px 6px rgba(0,0,0, 0.2);
+    
 `;

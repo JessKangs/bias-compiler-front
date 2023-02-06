@@ -16,9 +16,9 @@ export const Title = styled.h1`
 export const LinksFeed = styled.div`
     margin-top: 160px;
     padding: 20px 20px 90px 20px;
-    width: 700px;
+    width: 1200px;
     height: fit-content;
-    background-color: #c1d7e3;
+    background-color: #b8d4e3;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -28,31 +28,22 @@ export const LinksFeed = styled.div`
 
 
 export const Div = styled.div`
-    height: fit-content;
-    height: 200px;
-    width: 98%;
+    height: 290px;
+    width: 520px;
     background-color: #cadde8;
     box-sizing: border-box;
-    padding: 0 30px 0 20px;
+    padding: 45px 30px 0 20px;
     margin-top: 15px;
-    box-shadow: 10px 10px 5px rgba(0,0,0,.1);
+    box-shadow: 6px 6px 5px rgba(0,0,0,.1);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 8px;
 
     h1 {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
-    }
-
-    h2 {
-        font-size: 17px;
-        cursor: pointer;
-        color: darkblue;
-        text-decoration: underline;
+        margin: 0px 0 30px 0;
     }
 
     h3 {

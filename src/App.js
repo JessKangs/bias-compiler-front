@@ -8,6 +8,7 @@ import {
 import './App.css';
 
 import { Background } from './components/Background';
+import Player from "./pages/Footer/Footer";
 import MainPage from './pages/MainPage/MainPage';
 import SignUp from './pages/Enrollments/SignUp';
 import SignIn from './pages/Enrollments/SignIn';
@@ -70,6 +71,7 @@ function App() {
 
               </Routes>
             </Router>
+            {/* <Player /> */}
           </Background>
         </div>
     </UserContext.Provider> 

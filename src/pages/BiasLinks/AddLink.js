@@ -9,7 +9,6 @@ import axios from "axios";
 export default function AddLink() {
     const [title, setTitle] = useState('');
     const [site, setSite] = useState('');
-    const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
     const [tag, setTag] = useState('');
 
@@ -29,7 +28,6 @@ export default function AddLink() {
         const data = {
             title,
             site,
-            description,
             url,
             tag
         }
@@ -44,6 +42,7 @@ export default function AddLink() {
         }
 
     }
+    console.log(tag);
 
     return (
         <Content>
@@ -54,18 +53,23 @@ export default function AddLink() {
             <Form>
 
                 <label>*Escolha um titulo para o seu Link:</label>
-                <input onChange={(e) => setTitle(e.target.value)} type="text" name="titulo"/>
+                <input onChange={(e) => setTitle(e.target.value)} type="text" name="titulo" placeholder="Titulo..."/>
 
                 <label>*Coloque de qual site é o Link:</label>
-                <input onChange={(e) => setSite(e.target.value)} type="text" name="site"/>
-               
-                <label>*Descreva brevemente o conteúdo do Link:</label>
-                <input onChange={(e) => setDescription(e.target.value)} type="text" name="description"/>
+                <input onChange={(e) => setSite(e.target.value)} type="text" name="site" placeholder="You Tube, Twitter, etc..."/>
 
                 <label>*Coloque aqui o Link:</label>
-                <input onChange={(e) => setUrl(e.target.value)} type="url" name="link"/>
+                <input onChange={(e) => setUrl(e.target.value)} type="url" name="link" placeholder="Url..."/>
 
                 <label>*Escolha uma tag:</label>
+
+                {/* <select name="tags" >
+
+                    <option value="PHOTO" onChange={(e) => setTag(e.target.value)}>Foto</option>
+                    <option value="VIDEO" onChange={(e) => setTag(e.target.value)}>Video</option>
+                    <option value="TEXT" onChange={(e) => setTag(e.target.value)} >Texto</option>
+                    <option value="OTHER" onChange={(e) => setTag(e.target.value)} >Outro</option>
+                </select> */}
                 
                 <Tag>
                     <label>Video</label>
@@ -85,7 +89,7 @@ export default function AddLink() {
                 <Tag>
                 <label>Outro</label>
                 <input onChange={(e) => setTag('OTHER')} type="radio" name="quote tag"/>
-                </Tag>
+                </Tag> 
                
                 <Button onClick={addLink}>adicionar</Button>
 
