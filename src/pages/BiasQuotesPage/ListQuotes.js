@@ -1,9 +1,8 @@
 import Header from "../Header/Header"
 import { Div, QuotesFeed, FeedContent, LeftQuote, RightQuote, Text, Title, Content } from "../../components/BiasQuotes/ListQuotes";
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import useToken from "../../hooks/useToken";
+import useBiasData from "../../hooks/useBiasData";
 import axios from "axios";
 
 import leftQuote from "../../assets/img/left-quote.png"
@@ -33,7 +32,7 @@ function QuoteBox({value}) {
 
 export default function ListQuotes() {
     const [biasQuotes, setBiasQuotes] = useState([]);
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
     const token = useToken();
 
       const config = {

@@ -2,12 +2,11 @@ import { Content, Images, Button } from "../../components/WelcomePage/WelcomePag
 import NewBias from "../../assets/img/addnewbias.jpg"
 import ListBias from "../../assets/img/listyourbias.jpg"
 
-import { useContext } from "react"
-import { Link, useNavigate } from "react-router-dom";
-import UserContext from "../../contexts/UserContext";
+import { Link } from "react-router-dom";
+import useUserData from "../../hooks/useUserData";
 
 export default function WelcomePage() {
-let { userData } = useContext(UserContext);
+const userData = useUserData();
 
     return (
         <Content>

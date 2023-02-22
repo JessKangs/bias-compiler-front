@@ -1,12 +1,11 @@
 import { Content } from "../../components/BiasThoughts/BiasThoughts";
 import underConstruction from "../../assets/img/pikachu-under-construction.js.webp"
 import { Link } from "react-router-dom";
-import UserContext from "../../contexts/UserContext";
-import { useContext } from "react";
+import useBiasData from "../../hooks/useBiasData";
 import Header from "../Header/Header";
 
 export default function AddThought() {
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
 
     return (
         <Content>

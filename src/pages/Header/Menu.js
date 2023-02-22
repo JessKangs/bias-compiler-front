@@ -1,9 +1,10 @@
 import { Item, Name, Image, Content } from "../../components/Header/Menu";
 import ShootingStar from "../../assets/img/shooting-star.png"
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
+import useBiasData from "../../hooks/useBiasData";
+import useUserData from "../../hooks/useUserData";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function ListBias({value}) {
@@ -23,8 +24,10 @@ function ListBias({value}) {
 
 export default function Menu() {
     const [biasesData, setBiasesData] = useState([]);
-    let { userData, biasData } = useContext(UserContext);
+
     const navigate = useNavigate();
+    const userData = useUserData();
+    const biasData = useBiasData();
     const token = useToken();
 
     const config = {

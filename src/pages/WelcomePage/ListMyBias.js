@@ -3,6 +3,7 @@ import { BiasesBox, BiasBox, Container, Image, Text } from "../../components/Wel
 import UserContext from "../../contexts/UserContext";
 import { useEffect, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useUserData from "../../hooks/useUserData";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
 import EmptyData from "../EmptyData";
@@ -13,6 +14,7 @@ function ListBias({value}) {
 
     async function goToBiasPage() {
         setBiasData(value);
+        localStorage.setItem('BIAS_DATA', JSON.stringify(value));
         navigate(`/${value.id}/mainPage`);
     }
     
@@ -31,7 +33,9 @@ function ListBias({value}) {
 
 export default function ListMyBias() {
     const [biasesList, setBiasesList] = useState([]);
-    let { userData } = useContext(UserContext);
+    //let { userData } = useContext(UserContext);
+    //let userData = JSON.parse(localStorage.getItem('BIAS_COMP_USER_DATA'));
+    const userData = useUserData();
     const token = useToken();
 
     const config = {

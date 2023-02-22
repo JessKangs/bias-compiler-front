@@ -1,15 +1,13 @@
 import { Content, Form, Title, Button, Logo } from "../../components/Enrollments/SignIn";
 import { Link, useNavigate } from "react-router-dom";
 import InfoBox from "./InfoBox";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import axios from "axios";
-import UserContext from "../../contexts/UserContext";
 
 export default function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const {setUserData} = useContext(UserContext);
     const navigate = useNavigate();
 
     async function logar (event) {
@@ -22,7 +20,7 @@ export default function SignIn() {
 
         try {
             const request = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/signin`, data);
-            setUserData(request.data);
+            localStorage.setItem('BIAS_COMP_USER_DATA', JSON.stringify(request.data))
             navigate(`/${request.data.id}/welcome`);
           } catch (err) {
             console.log(err);

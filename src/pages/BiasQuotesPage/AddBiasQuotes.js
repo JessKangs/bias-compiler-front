@@ -1,10 +1,10 @@
 import { Content, Button, Form, Tag } from "../../components/BiasQuotes/AddBiasQuotes";
 
 import Header from "../Header/Header"
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
+import useBiasData from "../../hooks/useBiasData";
 import axios from "axios";
 
 export default function AddBiasQuotes() {
@@ -15,8 +15,9 @@ export default function AddBiasQuotes() {
     const [date, setDate] = useState('');
     const [tag, setTag] = useState('');
 
-    let { biasData } = useContext(UserContext);
+
     const navigate = useNavigate();
+    const biasData = useBiasData();
     const token = useToken();
 
     const config = {

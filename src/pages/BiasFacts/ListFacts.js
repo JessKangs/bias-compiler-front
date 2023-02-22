@@ -1,12 +1,11 @@
 import { FactsFeed, Div, Content, Text, Title } from "../../components/BiasFacts/ListFacts";
 
 import Header from "../Header/Header"
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
 import EmptyData from "../EmptyData";
+import useBiasData from "../../hooks/useBiasData";
 
 function FactBox({value}) {
 
@@ -24,7 +23,7 @@ function FactBox({value}) {
 
 export default function ListFacts() {
     const [biasFacts, setBiasFacts] = useState([]);
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
     const token = useToken();
 
       const config = {

@@ -2,8 +2,8 @@ import { LinksFeed, Div, Content, Title, Emojis, E, Previous, Next, MemoriesBox,
 
 import Header from "../Header/Header"
 import EmptyData from "../EmptyData";
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useState } from "react";
+import useBiasData from "../../hooks/useBiasData";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
 
@@ -41,7 +41,7 @@ export default function ListMemories() {
     const [showMore, setShowMore] = useState(0);
     const [biasMemories, setBiasMemories] = useState([]);
     const [date, setDate] = useState('');
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
     const token = useToken();
 
       const config = {

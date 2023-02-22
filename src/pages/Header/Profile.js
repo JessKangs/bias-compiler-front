@@ -1,14 +1,15 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import { ProfileBox, Content, Image, Nickname } from "../../components/Header/Profile"
 import UserContext from "../../contexts/UserContext";
 import useToken from "../../hooks/useToken";
 import Menu from "./Menu"
 import axios from "axios";
+import useUserData from "../../hooks/useUserData";
 
 export default function Profile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [profileData, setProfileData] = useState('');
-  let { userData } = useContext(UserContext);
+  const userData = useUserData();
   const token = useToken();
 
   function openMenu() {

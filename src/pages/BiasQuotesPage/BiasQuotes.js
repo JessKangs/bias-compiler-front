@@ -1,14 +1,13 @@
 import { Content, Images, Button } from "../../components/BiasQuotes/BiasQuotes"
 import Header from "../../pages/Header/Header"
-import UserContext from "../../contexts/UserContext";
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import useBiasData from "../../hooks/useBiasData";
+import { Link } from "react-router-dom";
 
 import addQuote from "../../assets/img/icon 6_cropped.jpg"
 import listQuotes from "../../assets/img/icon 7_cropped.jpg"
 
 export default function BiasQuotes() {
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
 
     return (
         <>

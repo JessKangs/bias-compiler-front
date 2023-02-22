@@ -1,16 +1,16 @@
 import { Content, Button, Form, Tag } from "../../components/BiasFacts/AddFact";
 import Header from "../Header/Header";
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
+import useBiasData from "../../hooks/useBiasData";
 
 export default function AddFact() {
     const [fact, setFact] = useState('');
     const [date, setDate] = useState('');
 
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
     const navigate = useNavigate();
     const token = useToken();
     

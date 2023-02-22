@@ -1,9 +1,8 @@
 import { Content, Form, Title, Button, Logo } from "../../components/Enrollments/SignUp";
 import { Link, useNavigate } from "react-router-dom";
 import InfoBox from "./InfoBox";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import axios from "axios";
-import UserContext from "../../contexts/UserContext";
 
 export default function SignUp () {
     const [nickname, setNickname] = useState('');
@@ -11,7 +10,6 @@ export default function SignUp () {
     const [imageUrl, setImageUrl] = useState('');
     const [password, setPassword] = useState('');
 
-    const { setUserData } = useContext(UserContext);
     const navigate = useNavigate();
 
     async function cadastrar (event) {
@@ -27,7 +25,7 @@ export default function SignUp () {
     try {
         const request = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/signup`, data);
 
-        setUserData(request.data);
+        localStorage.setItem('BIAS_COMP_USER_DATA', JSON.stringify(request.data))
         navigate(`/`)
     } catch (err) {
         console.log(err)

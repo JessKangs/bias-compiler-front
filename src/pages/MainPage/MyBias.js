@@ -12,13 +12,13 @@ import yellow from "../../assets/img/arrows/yellow-arrow.png"
 import purple from "../../assets/img/arrows/purple-arrow.png"
 import salmon from "../../assets/img/arrows/salmon-arrow.png"
 
-import { useContext } from "react"
 import { useNavigate } from "react-router-dom";
-import UserContext from "../../contexts/UserContext";
+import useBiasData from "../../hooks/useBiasData"
 
 export default function MyBias() {
 const navigate = useNavigate();
-let { biasData } = useContext(UserContext);
+//let { biasData } = useContext(UserContext);
+const biasData = useBiasData();
 
     return (
         <Content >

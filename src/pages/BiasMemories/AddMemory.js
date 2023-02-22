@@ -1,10 +1,10 @@
 import { Content, Button, Form, EmojiBox } from "../../components/BiasMemories/AddMemory";
 import Header from "../Header/Header";
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
+import useBiasData from "../../hooks/useBiasData";
 
 export default function AddMemory() {
     const [title, setTitle] = useState('');
@@ -22,8 +22,8 @@ export default function AddMemory() {
     const [cute, setCute] = useState(false);
     const [sad, setSad] = useState(false);
 
-    let { biasData } = useContext(UserContext);
     const navigate = useNavigate();
+    const biasData = useBiasData();
     const token = useToken();
     
     const config = {

@@ -1,10 +1,10 @@
 import { Content, Button, Form, Tag } from "../../components/BiasLinks/AddLink";
 import Header from "../Header/Header";
-import UserContext from "../../contexts/UserContext";
-import { useEffect, useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 import axios from "axios";
+import useBiasData from "../../hooks/useBiasData";
 
 export default function AddLink() {
     const [title, setTitle] = useState('');
@@ -12,7 +12,7 @@ export default function AddLink() {
     const [url, setUrl] = useState('');
     const [tag, setTag] = useState('');
 
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
     const navigate = useNavigate();
     const token = useToken();
     

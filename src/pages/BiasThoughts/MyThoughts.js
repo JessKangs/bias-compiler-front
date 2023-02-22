@@ -3,12 +3,12 @@ import NewBias from "../../assets/img/addnewbias.jpg"
 import ListBias from "../../assets/img/listyourbias.jpg"
 
 import axios from "axios";
-import { useState, useContext } from "react"
+import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
-import UserContext from "../../contexts/UserContext";
+import useBiasData from "../../hooks/useBiasData";
 
 export default function MyThoughts() {
-    let { biasData } = useContext(UserContext);
+    const biasData = useBiasData();
 
     return (
         <Content>

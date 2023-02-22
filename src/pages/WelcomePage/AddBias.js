@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useState, useContext } from "react"
-import { Link, useNavigate } from "react-router-dom";
-import UserContext from "../../contexts/UserContext";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+import useUserData from "../../hooks/useUserData";
 import useToken from "../../hooks/useToken";
 import { Form, Content, Button } from "../../components/Enrollments/FirstSteps"
 
@@ -14,7 +14,7 @@ export default function AddBias() {
 
     const navigate = useNavigate();
 
-    let { userData } = useContext(UserContext);
+    let userData = useUserData();
     const token = useToken();
     
     const config = {
