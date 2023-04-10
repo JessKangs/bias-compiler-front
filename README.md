@@ -7,6 +7,7 @@ Sobre este Projeto
 Eu sou uma grande fã de K-Pop, muitas coisas que acontecem me tocam profundamente, mas uma hora ou outra, se eu não guardar em algum lugar eu irei acabar esquecendo. Eu gosto muito de guardar memórias como: data, sentimentos e pensamentos que eu tive ao experenciar as coisas pela primeira vez, coisas que irão desaparecer conforme o tempo passa. Por isso eu fiz esse site com todas as coisas que eu gostaria de guardar e acessar de maneira fácil, tornando mais simples e confiável o processo de guardar as minhas queridas memórias.
 
 Adicionar vários Biases e suas informações:
+
 • Fatos
 Quando estamos conhecendo um novo bias, nós vamos conhecendo informações novas sobre ele. Pra mim, é especial podermos guardar coisas como "Ah nessa data eu fiquei sabendo a cor favorita dele" e "Uau, olha quantas coisas que eu sei sobre ele agora ^^". A aba dos fatos é sobre isso, e também para ter tipo ma wikipédia particular sobre seu Bias :D
 
