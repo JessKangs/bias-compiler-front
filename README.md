@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+Bias Compiler é um site para compilar informações sobre todos os seus bias*! Todas as informações, memórias, links e palavras que te tocaram, tudo em um lugar! De uma maneira simples, organizada e com um design agradável!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Bias é um membro favorito de um grupo de K-Pop!
 
-## Available Scripts
+Sobre este Projeto
 
-In the project directory, you can run:
+Eu sou uma grande fã de K-Pop, muitas coisas que acontecem me tocam profundamente, mas uma hora ou outra, se eu não guardar em algum lugar eu irei acabar esquecendo. Eu gosto muito de guardar memórias como: data, sentimentos e pensamentos que eu tive ao experenciar as coisas pela primeira vez, coisas que irão desaparecer conforme o tempo passa. Por isso eu fiz esse site com todas as coisas que eu gostaria de guardar e acessar de maneira fácil, tornando mais simples e confiável o processo de guardar as minhas queridas memórias.
 
-### `npm start`
+Adicionar vários Biases e suas informações:
+• Fatos
+Quando estamos conhecendo um novo bias, nós vamos conhecendo informações novas sobre ele. Pra mim, é especial podermos guardar coisas como "Ah nessa data eu fiquei sabendo a cor favorita dele" e "Uau, olha quantas coisas que eu sei sobre ele agora ^^". A aba dos fatos é sobre isso, e também para ter tipo ma wikipédia particular sobre seu Bias :D
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+• Links
+A coisa que mais se tem quando você é fã de K-Pop, são links. Links para videos, links para fanarts, links para traduções, para fotos. E se você quer salva-los, pode se tornar um emaranhado bem complicado. Então, a aba de Links é para você salvar os links e acessá-los de forma mais fácil, com a feature de procura pelas tags. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+• Citações
+Os nossos bias tem o dom de dizer coisas incríveis, não é verdade? Com essa aba você pode salvar as palavras deles, com um título e data para que no futuro você possa lembrar desses detalhes, e encontrar as suas citações favoritas de forma fácil pelas tags.
 
-### `npm test`
+• Memórias
+Aqui você pode colocar os momentos preciosos que você dividiu com eles, contar suas memórias e sentimentos, e adicionar links de videos e fotos relacionados, para assim, quando bater a saudade desse momento, você pode revisitá-lo rapidamente entre suas memórias.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+• Notas
+Esse espaço é mais para que você possa adicionar pensamentos rápidos e intrigantes que você possa ter sobre seu bias. Assim conforme você conhece ele ou passa o tempo com ele, você possa ver e lembrar o quanto você mesma mudou ao longo do tempo.
 
-### `npm run build`
+Próximos passos: 
+• Adicionar busca por tags.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tecnologias
+Javascript, CSS, HTML, React, Context API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
