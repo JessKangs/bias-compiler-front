@@ -36,3 +36,5 @@ Tecnologias
 
 Javascript, CSS, HTML, React, Context API
 
+Back: https://github.com/JessKangs/bias-compiler-back
+
